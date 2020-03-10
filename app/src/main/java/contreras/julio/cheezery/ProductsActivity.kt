@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.*
 import kotlinx.android.synthetic.main.activity_products.*
 import kotlinx.android.synthetic.main.item_products.view.*
@@ -16,7 +17,6 @@ class ProductsActivity : AppCompatActivity() {
     var hotDrinks =  ArrayList<Product>()
     var sweets = ArrayList<Product>()
     var salties = ArrayList<Product>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products)
@@ -29,21 +29,25 @@ class ProductsActivity : AppCompatActivity() {
             when (type) {
                 "coldDrinks" -> {
                     cargarColdDrinks()
+                    title_products.setImageResource(R.drawable.cold_drinks)
                     var adaptador = AdaptadorProductos(this, coldDrinks)
                     list_products.adapter = adaptador
                 }
                 "hotDrinks" -> {
                     cargarHotDrinks()
+                    title_products.setImageResource(R.drawable.hot_drinks)
                     var adaptador = AdaptadorProductos(this, hotDrinks)
                     list_products.adapter = adaptador
                 }
                 "sweets" -> {
                     cargarSweets()
+                    title_products.setImageResource(R.drawable.sweets)
                     var adaptador = AdaptadorProductos(this, sweets)
                     list_products.adapter = adaptador
                 }
                 "salties" -> {
                     cargarSalties()
+                    title_products.setImageResource(R.drawable.salties)
                     var adaptador = AdaptadorProductos(this, salties)
                     list_products.adapter = adaptador
                 }

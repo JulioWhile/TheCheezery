@@ -11,8 +11,8 @@
         android:id="@+id/title_products"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/cold_drinks"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cold_drinks" />
 
     <ImageView
         android:layout_width="match_parent"
